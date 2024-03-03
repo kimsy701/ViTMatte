@@ -309,7 +309,6 @@ class Block(nn.Module):
         return x
 
 
-
 class ViT(Backbone):
     """
     This module implements Vision Transformer (ViT) backbone in :paper:`vitdet`.
