@@ -9,13 +9,13 @@ embed_dim, num_heads = 384, 6
 model = L(ViTMatte)(
     backbone = L(ViT)(  # Single-scale ViT backbone
         in_chans=4,
-        img_size=1024, #512
+        img_size=512,
         patch_size=16,
         embed_dim=embed_dim,
         depth=12,
         num_heads=num_heads,
         drop_path_rate=0,
-        window_size=14,
+        window_size=7, #14
         mlp_ratio=4,
         qkv_bias=True,
         norm_layer=partial(nn.LayerNorm, eps=1e-6),
